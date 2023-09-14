@@ -18,3 +18,7 @@
 <hr>
 
 <a href="{{ route('posts.create') }}">Cadastrar novo post</a>
+
+<hr>
+
+{{ $posts->links() }}

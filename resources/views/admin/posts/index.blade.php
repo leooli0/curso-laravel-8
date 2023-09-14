@@ -1,5 +1,11 @@
 <h1>Listanto Posts</h1>
 
+<form action="{{ route('posts.search') }}" method="post">
+    @csrf
+    <input type="text" name="search" placeholder="Filtrar">
+    <button type="submit">Filtrar</button>
+</form>
+
 @if (session('message'))
     <div>
         {{ session('message') }}
@@ -21,4 +27,9 @@
 
 <hr>
 
-{{ $posts->links() }}
+@if (isset($filters))
+    {{ $posts->appends($filters)->links() }}
+@else
+    {{ $posts->links() }}
+@endif
+

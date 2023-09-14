@@ -17,4 +17,4 @@
 
 <hr>
 
-<a href="{{ route('posts.create') }}">Voltar para listagem</a>
+<a href="{{ route('posts.index') }}">Voltar para listagem</a>

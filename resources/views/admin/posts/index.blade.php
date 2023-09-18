@@ -1,3 +1,8 @@
+@extends('admin.layouts.app')
+
+@section('title', 'Listagem dos Posts')
+
+@section('content')
 <h1>Listanto Posts</h1>
 
 <form action="{{ route('posts.search') }}" method="post">
@@ -32,4 +37,4 @@
 @else
     {{ $posts->links() }}
 @endif
-
+@endsection

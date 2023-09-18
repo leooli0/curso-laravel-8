@@ -18,6 +18,7 @@
 @endif
 
 @foreach ($posts as $post)
+    <img src="{{ url("storage/{$post->image}") }}" alt="{{ $post->title }}" style="max-width=100;">
     <p>
         {{ $post->title }} [
             <a href="{{ route('posts.show', $post->id) }}">Ver</a> |
